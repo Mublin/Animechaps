@@ -93,14 +93,17 @@ export default function Settings() {
         <Card className="p-4 md:p-6">
           <h3 className="text-base md:text-lg font-semibold mb-4">Privacy</h3>
           <div className="space-y-3">
-            <Button variant="ghost" className="w-full justify-start">
+            <Button variant="ghost" className="w-full justify-between" onClick={() => alert('Blocked accounts feature coming soon!')}>
               Blocked accounts
+              <span className="text-xs bg-muted px-2 py-1 rounded">0</span>
             </Button>
-            <Button variant="ghost" className="w-full justify-start">
+            <Button variant="ghost" className="w-full justify-between" onClick={() => alert('Message privacy settings coming soon!')}>
               Who can message me
+              <span className="text-xs text-muted-foreground">Everyone</span>
             </Button>
-            <Button variant="ghost" className="w-full justify-start">
+            <Button variant="ghost" className="w-full justify-between" onClick={() => alert('Call privacy settings coming soon!')}>
               Who can call me
+              <span className="text-xs text-muted-foreground">Contacts</span>
             </Button>
           </div>
         </Card>
@@ -109,10 +112,18 @@ export default function Settings() {
         <Card className="p-4 md:p-6">
           <h3 className="text-base md:text-lg font-semibold mb-4">Account</h3>
           <div className="space-y-3">
-            <Button variant="ghost" className="w-full justify-start">
+            <Button variant="ghost" className="w-full justify-start" onClick={() => alert('Password change feature coming soon!')}>
               Change password
             </Button>
-            <Button variant="ghost" className="w-full justify-start text-destructive hover:text-destructive">
+            <Button 
+              variant="ghost" 
+              className="w-full justify-start text-destructive hover:text-destructive"
+              onClick={() => {
+                if (confirm('Are you sure you want to delete your account? This action cannot be undone.')) {
+                  alert('Account deletion feature coming soon!');
+                }
+              }}
+            >
               Delete account
             </Button>
           </div>

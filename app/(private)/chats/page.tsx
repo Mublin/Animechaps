@@ -173,7 +173,12 @@ export default function Chat() {
             <Button variant="ghost" size="sm" className="h-9 w-9 p-0">
               <Video className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="sm" className="h-9 w-9 p-0">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="h-9 w-9 p-0"
+              onClick={() => alert('Chat options: Block user, Clear chat, Export chat')}
+            >
               <MoreVertical className="h-5 w-5" />
             </Button>
           </div>
